@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Input3D } from "@/components/ui/input-3d";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
 import { useNavigate } from "react-router-dom";
@@ -78,7 +78,7 @@ const Auth = () => {
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
-      <Card className="w-full max-w-md">
+      <Card className="w-full max-w-2xl border-4 border-black shadow-[15px_15px_0_#000]">
         <CardHeader className="text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center">
@@ -98,34 +98,28 @@ const Auth = () => {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label className="text-sm font-medium text-foreground block mb-2">
-                Email
-              </label>
-              <Input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="admin@primemotors.com"
-                maxLength={255}
-              />
-            </div>
+          <form onSubmit={handleSubmit} className="space-y-8">
+            <Input3D
+              type="email"
+              icon="email"
+              label="EMAIL"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="admin@primemotors.com"
+              maxLength={255}
+            />
 
-            <div>
-              <label className="text-sm font-medium text-foreground block mb-2">
-                Senha
-              </label>
-              <Input
-                type="password"
-                required
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="••••••••"
-                maxLength={100}
-              />
-            </div>
+            <Input3D
+              type="password"
+              icon="password"
+              label="SENHA"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="••••••••"
+              maxLength={100}
+            />
 
             <Button type="submit" className="w-full" disabled={loading}>
               {loading ? "Processando..." : (isLogin ? "Entrar" : "Criar Conta")}
