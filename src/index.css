@@ -18,8 +18,8 @@ All colors MUST be HSL.
     --popover: 0 0% 10%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 0 72% 51%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 45 87% 56%;
+    --primary-foreground: 0 0% 0%;
 
     --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 98%;
@@ -27,27 +27,27 @@ All colors MUST be HSL.
     --muted: 0 0% 20%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 0 72% 51%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 45 87% 56%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 20%;
     --input: 0 0% 15%;
-    --ring: 0 72% 51%;
+    --ring: 45 87% 56%;
 
     --radius: 0.75rem;
 
     /* Premium gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(0 72% 51%), hsl(0 72% 41%));
+    --gradient-primary: linear-gradient(135deg, hsl(45 87% 56%), hsl(45 87% 46%));
     --gradient-dark: linear-gradient(180deg, hsl(0 0% 7%), hsl(0 0% 10%));
     --gradient-card: linear-gradient(145deg, hsl(0 0% 10%), hsl(0 0% 12%));
     
     /* Premium shadows */
-    --shadow-premium: 0 20px 50px -12px hsl(0 72% 51% / 0.25);
+    --shadow-premium: 0 20px 50px -12px hsl(45 87% 56% / 0.25);
     --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.5);
-    --shadow-glow: 0 0 40px hsl(0 72% 51% / 0.3);
+    --shadow-glow: 0 0 40px hsl(45 87% 56% / 0.3);
 
     /* Animations */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -61,19 +61,19 @@ All colors MUST be HSL.
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 10%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 72% 51%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 45 87% 56%;
+    --primary-foreground: 0 0% 0%;
     --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 20%;
     --muted-foreground: 0 0% 65%;
-    --accent: 0 72% 51%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 45 87% 56%;
+    --accent-foreground: 0 0% 0%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 20%;
     --input: 0 0% 15%;
-    --ring: 0 72% 51%;
+    --ring: 45 87% 56%;
   }
 }
 
