@@ -9,23 +9,23 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Prime Motors - Premium Theme */
-    --background: 0 0% 7%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 98%;
+    --foreground: 0 0% 7%;
 
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
 
     --primary: 45 87% 56%;
     --primary-foreground: 0 0% 0%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 7%;
 
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 40%;
 
     --accent: 45 87% 56%;
     --accent-foreground: 0 0% 0%;
@@ -33,20 +33,20 @@ All colors MUST be HSL.
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 15%;
+    --border: 0 0% 85%;
+    --input: 0 0% 95%;
     --ring: 45 87% 56%;
 
     --radius: 0.75rem;
 
     /* Premium gradients */
     --gradient-primary: linear-gradient(135deg, hsl(45 87% 56%), hsl(45 87% 46%));
-    --gradient-dark: linear-gradient(180deg, hsl(0 0% 7%), hsl(0 0% 10%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 10%), hsl(0 0% 12%));
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 98%), hsl(0 0% 95%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(0 0% 97%));
     
     /* Premium shadows */
     --shadow-premium: 0 20px 50px -12px hsl(45 87% 56% / 0.25);
-    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.5);
+    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.15);
     --shadow-glow: 0 0 40px hsl(45 87% 56% / 0.3);
 
     /* Animations */
@@ -55,24 +55,24 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 0 0% 7%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 98%;
+    --background: 0 0% 98%;
+    --foreground: 0 0% 7%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
     --primary: 45 87% 56%;
     --primary-foreground: 0 0% 0%;
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 65%;
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 7%;
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 40%;
     --accent: 45 87% 56%;
     --accent-foreground: 0 0% 0%;
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 20%;
-    --input: 0 0% 15%;
+    --border: 0 0% 85%;
+    --input: 0 0% 95%;
     --ring: 45 87% 56%;
   }
 }
