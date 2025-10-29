@@ -29,8 +29,17 @@ const VehicleCard = ({ vehicle, onViewDetails }: VehicleCardProps) => {
     return new Intl.NumberFormat("pt-BR").format(km) + " km";
   };
 
+  const handleClick = () => {
+    if (onViewDetails) {
+      onViewDetails(vehicle.id);
+    }
+  };
+
   return (
-    <Card className="group overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(220,38,38,0.15)]">
+    <Card 
+      className="group overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(241,194,50,0.15)] cursor-pointer"
+      onClick={handleClick}
+    >
       <div className="relative overflow-hidden aspect-[16/10]">
         <img
           src={vehicle.image_url || "/placeholder.svg"}
@@ -67,16 +76,17 @@ const VehicleCard = ({ vehicle, onViewDetails }: VehicleCardProps) => {
               {formatPrice(vehicle.price)}
             </span>
           </div>
-          {onViewDetails && (
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => onViewDetails(vehicle.id)}
-              className="hover:bg-primary/10 hover:text-primary"
-            >
-              Detalhes
-            </Button>
-          )}
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={(e) => {
+              e.stopPropagation();
+              handleClick();
+            }}
+            className="hover:bg-primary/10 hover:text-primary"
+          >
+            Detalhes
+          </Button>
         </div>
       </CardContent>
     </Card>

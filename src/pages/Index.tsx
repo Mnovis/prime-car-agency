@@ -2,13 +2,15 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import VehicleCard from "@/components/VehicleCard";
 import { useQuery } from "@tanstack/react-query";
 
 const Index = () => {
+  const navigate = useNavigate();
+  
   const { data: vehicles, isLoading } = useQuery({
     queryKey: ["featured-vehicles"],
     queryFn: async () => {
@@ -82,7 +84,11 @@ const Index = () => {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {vehicles?.map((vehicle) => (
-                <VehicleCard key={vehicle.id} vehicle={vehicle} />
+                <VehicleCard 
+                  key={vehicle.id} 
+                  vehicle={vehicle}
+                  onViewDetails={(id) => navigate(`/veiculo/${id}`)}
+                />
               ))}
             </div>
           )}

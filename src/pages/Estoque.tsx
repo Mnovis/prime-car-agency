@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -9,6 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Search } from "lucide-react";
 
 const Estoque = () => {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
   const [brandFilter, setBrandFilter] = useState("all");
   const [yearFilter, setYearFilter] = useState("all");
@@ -135,7 +137,11 @@ const Estoque = () => {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredVehicles.map((vehicle) => (
-                  <VehicleCard key={vehicle.id} vehicle={vehicle} />
+                  <VehicleCard 
+                    key={vehicle.id} 
+                    vehicle={vehicle}
+                    onViewDetails={(id) => navigate(`/veiculo/${id}`)}
+                  />
                 ))}
               </div>
             </>
